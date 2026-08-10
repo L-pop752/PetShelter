@@ -1,0 +1,408 @@
+
+
+:root {
+    /* Paleta de colores de la imagen */
+    --color-nubes: #FFF8E7;
+    --color-cielo: #8CC1E9;
+    --color-océano: #3b7297;
+    --color-arándano: #0055A0;
+    --color-pájaro: #438BC4;
+
+    /* Colores de texto y fondo */
+    --color-texto: #12284B;
+    --color-texto-claro: #438BC4;
+    --color-fondo: #EAF6FC;
+    --color-fondo-claro: #b6e2f3;
+    --color-resaltado: #ffc107;
+    --color-borde: #dee2e6;
+
+    /* Efectos */
+    --sombra: 0 4px 12px rgba(18, 40, 75, 0.08);
+    --sombra-hover: 0 8px 24px rgba(18, 40, 75, 0.15);
+    --transicion: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-texto);
+    line-height: 1.6;
+    background-color: var(--color-fondo);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    transition: var(--transicion);
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =====================================
+   TÍTULOS Y SECCIONES
+====================================== */
+.titulo-seccion {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--color-océano);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.subtitulo-seccion {
+    text-align: center;
+    color: var(--color-pájaro);
+    margin-bottom: 3rem;
+}
+
+.seccion {
+    padding: 4rem 0;
+}
+
+.fondo-claro {
+    background-color: var(--color-fondo-claro);
+}
+
+/* =====================================
+   BOTONES
+====================================== */
+.boton {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transicion);
+    font-family: inherit;
+}
+
+.boton-primario {
+    background-color: var(--color-arándano);
+    color: white;
+}
+
+.boton-primario:hover {
+    background-color: var(--color-océano);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-hover);
+}
+
+.boton-adoptar {
+    background-color: var(--color-resaltado);
+    color: var(--color-texto);
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+.boton-adoptar:hover {
+    background-color: #e0a800;
+    color: var(--color-océano);
+}
+
+/* =====================================
+   CABECERA Y NAVEGACIÓN
+====================================== */
+
+
+/* =====================================
+   PORTADA
+====================================== */
+.portada {
+    background: linear-gradient(rgba(18, 40, 75, 0.65), rgba(18, 40, 75, 0.75)), url('https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=1200') center/cover no-repeat;
+    color: rgb(115, 193, 245);
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.portada-contenido h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--color-nubes);
+}
+
+.portada-contenido p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    color: #d4ebfa;
+}
+
+/* =====================================
+   SECCIÓN NOSOTROS
+====================================== */
+.nosotros-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.nosotros-imagen img {
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: var(--sombra);
+    transition: var(--transicion);
+}
+
+.nosotros-imagen img:hover {
+    transform: scale(1.02);
+    box-shadow: var(--sombra-hover);
+}
+
+.nosotros-texto p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    color: var(--color-texto);
+}
+
+.lista-valores {
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+.lista-valores li {
+    padding: 0.4rem 0;
+    font-weight: 500;
+    color: var(--color-texto);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.lista-valores li::before {
+    content: '✓';
+    color: var(--color-arándano);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* =====================================
+   TARJETAS DE MASCOTAS
+====================================== */
+.mascotas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.tarjeta-mascota {
+    background: var(--color-fondo-claro);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    transition: var(--transicion);
+    height: 100%;
+}
+
+.tarjeta-mascota:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-hover);
+}
+
+.tarjeta-mascota img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tarjeta-mascota h3 {
+    padding: 1rem 1rem 0.5rem;
+    color: var(--color-océano);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.tarjeta-mascota p {
+    padding: 0.3rem 1rem;
+    font-size: 0.95rem;
+    color: var(--color-texto);
+}
+
+.tarjeta-mascota .boton-adoptar {
+    margin: 1rem;
+    width: calc(100% - 2rem);
+}
+
+/* =====================================
+   CÓMO AYUDAR / ADOPCIÓN
+====================================== */
+.ayuda-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.ayuda-tarjeta {
+    background: var(--color-fondo-claro);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    box-shadow: var(--sombra);
+    transition: var(--transicion);
+}
+
+.ayuda-tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-hover);
+}
+
+.ayuda-tarjeta h3 {
+    color: var(--color-océano);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+/* =====================================
+   FORMULARIO DE CONTACTO
+====================================== */
+.formulario-contacto {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #eee;
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--sombra);
+}
+
+.grupo-formulario {
+    margin-bottom: 1.5rem;
+}
+
+.grupo-formulario label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--color-océano);
+}
+
+.grupo-formulario input,
+.grupo-formulario textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--color-cielo);
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: rgba(140, 193, 233, 0.08);
+    transition: var(--transicion);
+}
+
+.grupo-formulario input:focus,
+.grupo-formulario textarea:focus {
+    outline: none;
+    border-color: var(--color-arándano);
+    background-color: white;
+}
+
+/* =====================================
+   VENTANA MODAL
+====================================== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 40, 75, 0.7);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-contenido {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: var(--sombra-hover);
+}
+
+.cerrar {
+    position: absolute;
+    right: 1.2rem;
+    top: 0.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--color-pájaro);
+    transition: var(--transicion);
+}
+
+.cerrar:hover {
+    color: var(--color-océano);
+}
+
+/* =====================================
+   PIE DE PÁGINA
+====================================== */
+.pie-pagina {
+    background-color: var(--color-océano);
+    color: white;
+    text-align: center;
+    padding: 2.5rem 0;
+    margin-top: auto;
+}
+
+.pie-pagina p {
+    margin-bottom: 0.5rem;
+    color: #BFD7F2;
+}
+
+.pie-pagina p:first-of-type {
+    color: var(--color-nubes);
+    font-weight: 500;
+}
+
+/* =====================================
+   DISEÑO RESPONSIVO (para celulares)
+====================================== */
+@media (max-width: 900px) {
+    .nosotros-grid,
+    .mascotas-grid,
+    .ayuda-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .nosotros-grid,
+    .mascotas-grid,
+    .ayuda-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portada-contenido h1 {
+        font-size: 2rem;
+    }
+
+    .titulo-seccion {
+        font-size: 1.6rem;
+    }
+}
