@@ -39,7 +39,7 @@ formularioAdopcion.addEventListener('submit', function(e) {
 // ============================================
 
 const API_MASCOTAS =
-    "https://api.thedogapi.com/v1/images/search?limit=10";
+    "https://api.thedogapi.com/v1/images/search?limit=12";
 
 const API_KEY = "live_GEo7GpRdKpfKsbNk2YtryaJWcioc2buzMmbh6iibbr3HcNZI1FtZJnvAGJvLDSAZ"
 
