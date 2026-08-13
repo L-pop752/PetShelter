@@ -3,41 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PetShelter - Refugio de Mascotas 🐾</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <meta
+        name="description"
+        content="PetShelter es un refugio de mascotas dedicado a encontrar hogares responsables y llenos de amor.">
+    <title>PetShelter | Refugio y adopción de mascotas</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 
-    <!-- CABECERA Y MENÚ IGUAL EN TODAS LAS PÁGINAS -->
-    <header class="cabecera bg-info">
-        <nav class="navegacion navbar navbar-expand-lg justify-content-between" id="menuNav">
-            <div class="container-fluid">
-                <a href="../index.html" class="navbar-brand me-6">🐾 PetShelter</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- =====NAVBAR===== -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="../index.html">
+                    <span class="brand-icon">🐾</span>
+                    <span>PetShelter</span>
+                </a>
+
+                <!-- Botón menú móvil -->
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Abrir menú de navegación">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <!-- Menú -->
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a href="../index.html" class="nav-link text-light">Inicio</a>
+                            <a class="nav-link active" href="../index.html">
+                                Inicio
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a href="nosotros.html" class="nav-link text-light">Nosotros</a>
+                            <a class="nav-link" href="pages/nosotros.html">
+                                Nosotros
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a href="mascotas.html" class="nav-link text-light">Mascotas</a>
+                            <a class="nav-link" href="pages/mascotas.html">
+                                Mascotas
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a href="adopcion.html" class="nav-link active text-primary">Adopción</a>
+                            <a class="nav-link" href="pages/adopcion.html">
+                                Adopción
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a href="contacto.html" class="nav-link text-light">Contacto</a>
+                            <a class="nav-link" href="pages/contacto.html">
+                                Contacto
+                            </a>
                         </li>
                     </ul>
+
+                    <a href="pages/contacto.html" class="btn btn-primary ms-lg-4">Adoptar</a>
+
                 </div>
             </div>
         </nav>
@@ -90,17 +128,112 @@
         </div>
     </section>
 
-    <footer class="pie-pagina">
-        <div class="contenedor">
-            <p>🐾 PetShelter — "Adopta, ama y protege"</p>
-            <p>📍 Malambo, Atlántico, Colombia | 📞 +57 300 241 2860 | ✉️ petshelter@gmail.com.co</p>
-            <p>&copy; 2026 — Todos los derechos reservados</p>
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Información -->
+                <div class="col-lg-4">
+                    <a href="index.html" class="footer-brand">
+                        🐾 PetShelter
+                    </a>
+
+                    <p>
+                        Trabajamos para que cada mascota encuentre
+                        una familia responsable y llena de amor.
+                    </p>
+                </div>
+
+                <!-- Navegación -->
+                <div class="col-md-4 col-lg-2">
+                    <h3>
+                        Navegación
+                    </h3>
+
+                    <ul class="footer-links">
+                        <li>
+                            <a href="index.html">
+                                Inicio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pages/nosotros.html">
+                                Nosotros
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pages/mascotas.html">
+                                Mascotas
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pages/adopcion.html">
+                                Adopción
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pages/contacto.html">
+                                Contacto
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contacto -->
+                <div class="col-md-4 col-lg-3">
+                    <h3>
+                        Contacto
+                    </h3>
+
+                    <ul class="footer-contact">
+                        <li>
+                            📍 Bogotá, Colombia
+                        </li>
+                        <li>
+                            📞 +57 300 241 2860
+                        </li>
+                        <li>
+                            ✉️ petshelter@gmail.com.co
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Redes -->
+                <div class="col-md-4 col-lg-3">
+                    <h3>
+                        Síguenos
+                    </h3>
+
+                    <p>
+                        Conoce nuestras historias y mascotas
+                        en nuestras redes sociales.
+                    </p>
+
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram de PetShelter">
+                            Instagram
+                        </a>
+
+                        <a href="#" aria-label="Facebook de PetShelter">
+                            Facebook
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    © 2026 PetShelter. Todos los derechos reservados.
+                </p>
+
+                <p>
+                    Hecho con ❤️ para los animales.
+                </p>
+            </div>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
-
     <script src="../js/app.js"></script>
 </body>
 </html>
