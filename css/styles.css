@@ -629,6 +629,96 @@ ul {
 
 
 /* =========================================================
+   9.5. GRID Y MODAL DE MASCOTAS
+   ========================================================= */
+
+.mascotas-grid {
+    margin-top: 2rem;
+}
+
+.mascotas-grid .card {
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.mascotas-grid .card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.mascotas-grid .card img {
+    height: 260px;
+    object-fit: cover;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: rgba(18, 40, 75, 0.55);
+}
+
+.modal-contenido {
+    position: relative;
+    width: min(100%, 560px);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--shadow-lg);
+}
+
+.modal-contenido h3 {
+    margin-bottom: 1.5rem;
+    color: var(--text);
+    font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+.cerrar {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    color: var(--text-light);
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.grupo-formulario {
+    margin-bottom: 1rem;
+}
+
+.grupo-formulario label {
+    display: block;
+    margin-bottom: 0.45rem;
+    color: var(--text);
+    font-weight: 600;
+}
+
+.grupo-formulario input,
+.grupo-formulario textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background-color: var(--surface);
+    color: var(--text);
+}
+
+.grupo-formulario input:focus,
+.grupo-formulario textarea:focus {
+    outline: 2px solid rgba(0, 85, 160, 0.2);
+    border-color: var(--primary);
+}
+
+/* =========================================================
    10. TARJETAS DE MASCOTAS
    ========================================================= */
 

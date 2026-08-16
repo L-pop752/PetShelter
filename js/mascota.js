@@ -12,18 +12,20 @@ const mascotas = [
 
 // Cargar las mascotas
 function cargarMascotas() {
+    if (!listaMascotas) return;
+
     listaMascotas.innerHTML = '';
     mascotas.forEach(mascota => {
         const tarjeta = document.createElement('div');
-        tarjeta.className = 'col-md-4';
+        tarjeta.className = 'col-md-6 col-lg-4';
         tarjeta.innerHTML = `
-            <div class="card h-100 shadow-sm">
+            <div class="card h-100 shadow-sm border-0">
                 <img src="${mascota.imagen}" class="card-img-top" alt="${mascota.nombre}" loading="lazy">
-                <div class="card-body">
+                <div class="card-body d-flex flex-column">
                     <h3 class="card-title">${mascota.nombre} 🐾</h3>
-                    <p class="card-text">${mascota.tipo} · ${mascota.edad}</p>
-                    <p class="card-text">${mascota.descripcion}</p>
-                    <button class="btn btn-primary w-100" onclick="abrirModal('${mascota.nombre}')">¡Quiero adoptarlo!</button>
+                    <p class="card-text text-primary fw-semibold">${mascota.tipo} · ${mascota.edad}</p>
+                    <p class="card-text flex-grow-1">${mascota.descripcion}</p>
+                    <button class="btn btn-primary w-100 mt-2" onclick="abrirModal('${mascota.nombre}')">¡Quiero adoptarlo!</button>
                 </div>
             </div>
         `;
