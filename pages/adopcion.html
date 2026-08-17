@@ -1,38 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
     <meta
         name="description"
-        content="PetShelter es un refugio de mascotas dedicado a encontrar hogares responsables y llenos de amor.">
-    <title>PetShelter | Refugio y adopción de mascotas</title>
+        content="Conoce el proceso de adopción responsable de PetShelter y descubre cómo darle un hogar lleno de amor a una mascota.">
+
+    <title>Adopción | PetShelter</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Bootstrap -->
     <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/styles.css">
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- CSS principal -->
+    <link
+        rel="stylesheet"
+        href="../css/styles.css">
 </head>
+
 <body>
 
-    <!-- =====NAVBAR===== -->
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+
     <header class="site-header">
+
         <nav class="navbar navbar-expand-lg">
+
             <div class="container">
 
                 <!-- Logo -->
-                <a class="navbar-brand" href="../index.html">
-                    <span class="brand-icon">🐾</span>
-                    <span>PetShelter</span>
+
+                <a
+                    class="navbar-brand"
+                    href="../index.html"
+                    aria-label="PetShelter - Ir al inicio">
+
+                    <span
+                        class="brand-icon"
+                        aria-hidden="true">
+                        🐾
+                    </span>
+
+                    <span>
+                        PetShelter
+                    </span>
+
                 </a>
 
+
                 <!-- Botón menú móvil -->
+
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -41,165 +79,569 @@
                     aria-controls="menuPrincipal"
                     aria-expanded="false"
                     aria-label="Abrir menú de navegación">
+
                     <span class="navbar-toggler-icon"></span>
+
                 </button>
 
+
                 <!-- Menú -->
-                <div class="collapse navbar-collapse" id="menuPrincipal">
+
+                <div
+                    class="collapse navbar-collapse"
+                    id="menuPrincipal">
+
                     <ul class="navbar-nav ms-auto">
+
                         <li class="nav-item">
-                            <a class="nav-link active" href="../index.html">
+                            <a
+                                class="nav-link"
+                                href="../index.html">
                                 Inicio
                             </a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="nosotros.html">
+                            <a
+                                class="nav-link"
+                                href="nosotros.html">
                                 Nosotros
                             </a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="mascotas.html">
+                            <a
+                                class="nav-link"
+                                href="mascotas.html">
                                 Mascotas
                             </a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="adopcion.html">
+                            <a
+                                class="nav-link active"
+                                href="adopcion.html"
+                                aria-current="page">
                                 Adopción
                             </a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">
+                            <a
+                                class="nav-link"
+                                href="contacto.html">
                                 Contacto
                             </a>
                         </li>
+
                     </ul>
 
-                    <a href="adopcion.html" class="btn btn-primary ms-lg-4">Adoptar</a>
+                    <a
+                        href="mascotas.html"
+                        class="btn btn-primary ms-lg-4">
+                        Adoptar
+                    </a>
 
                 </div>
+
             </div>
+
         </nav>
+
     </header>
 
-    <section class="seccion">
-        <div class="contenedor">
-            <h2 class="titulo-seccion">¿Cómo funciona la adopción? 🐾</h2>
-            <p class="subtitulo-seccion">Seguimos un proceso responsable para garantizar el bienestar de cada mascota</p>
 
-            <!-- PASOS DEL PROCESO -->
-            <div style="max-width: 800px; margin: 0 auto;">
-                <div style="background: #fff; padding: 1.5rem; margin-bottom: 1rem; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.08);">
-                    <h3 style="color: #2d5016; margin-bottom: 0.5rem;">1️⃣ Elige a tu mascota</h3>
-                    <p>Visita nuestra página de <a href="mascotas.html" style="color: #4CAF50; font-weight: 600;">Mascotas</a> y conoce a los peluditos que buscan hogar. Si tienes dudas sobre alguno, ¡contáctanos!</p>
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+         ===================================================== -->
+
+    <main>
+
+        <!-- =================================================
+             ENCABEZADO
+             ================================================= -->
+
+        <section class="section section-blue">
+
+            <div class="container">
+
+                <div
+                    class="section-heading text-center">
+
+                    <span class="section-label">
+                        ADOPCIÓN RESPONSABLE
+                    </span>
+
+                    <h1>
+                        ¿Cómo funciona la adopción? 🐾
+                    </h1>
+
+                    <p>
+                        Seguimos un proceso responsable para garantizar
+                        el bienestar de cada mascota y encontrarle
+                        una familia adecuada.
+                    </p>
+
                 </div>
 
-                <div style="background: #fff; padding: 1.5rem; margin-bottom: 1rem; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.08);">
-                    <h3 style="color: #2d5016; margin-bottom: 0.5rem;">2️⃣ Envía tu solicitud</h3>
-                    <p>Haz clic en "¡Quiero adoptar!" sobre la mascota que elegiste y completa el formulario con tus datos. También puedes escribirnos desde la página de <a href="contacto.html" style="color: #4CAF50; font-weight: 600;">Contacto</a>.</p>
-                </div>
-
-                <div style="background: #fff; padding: 1.5rem; margin-bottom: 1rem; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.08);">
-                    <h3 style="color: #2d5016; margin-bottom: 0.5rem;">3️⃣ Entrevista y visita</h3>
-                    <p>Nos pondremos en contacto contigo para conversar y coordinar una visita al refugio. Queremos asegurarnos de que sea una buena convivencia para todos.</p>
-                </div>
-
-                <div style="background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.08);">
-                    <h3 style="color: #2d5016; margin-bottom: 0.5rem;">4️⃣ ¡Llévalo a casa! 🏠</h3>
-                    <p>Firmas el compromiso de adopción responsable y tu nuevo amigo se va contigo. Todos entregan vacunados, desparasitados y esterilizados ✅</p>
-                </div>
             </div>
 
-            <!-- REQUISITOS -->
-            <div style="margin-top: 3rem; padding: 2rem; background: #f0f9e8; border-radius: 12px;">
-                <h3 style="text-align: center; color: #2d5016; margin-bottom: 1.5rem;">📋 Requisitos para adoptar</h3>
-                <ul style="max-width: 600px; margin: 0 auto; font-size: 1.05rem; line-height: 1.8;">
-                    <li>✅ Ser mayor de edad (presentar documento de identidad)</li>
-                    <li>✅ Comprometerse a cuidarlo por toda su vida</li>
-                    <li>✅ Brindarle alimentación adecuada, techo y atención veterinaria</li>
-                    <li>✅ No tener intención de usarlo para vigilancia o trabajos</li>
-                    <li>✅ Aceptar seguimiento del refugio si lo consideramos necesario</li>
-                </ul>
+        </section>
+
+
+        <!-- =================================================
+             PASOS DEL PROCESO
+             ================================================= -->
+
+        <section class="section section-light">
+
+            <div class="container">
+
+                <div
+                    class="section-heading text-center">
+
+                    <span class="section-label">
+                        NUESTRO PROCESO
+                    </span>
+
+                    <h2>
+                        Adoptar es darle
+                        <span>una nueva oportunidad</span>
+                    </h2>
+
+                    <p>
+                        Te acompañamos durante todo el proceso
+                        para que la adopción sea segura y responsable.
+                    </p>
+
+                </div>
+
+
+                <div class="row g-4 mt-4">
+
+                    <!-- Paso 1 -->
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <article class="step-card">
+
+                            <span class="step-number">
+                                01
+                            </span>
+
+                            <div
+                                class="step-icon"
+                                aria-hidden="true">
+                                🐶
+                            </div>
+
+                            <h3>
+                                Elige a tu mascota
+                            </h3>
+
+                            <p>
+                                Visita nuestra página de mascotas
+                                y conoce a los peluditos que buscan
+                                un hogar lleno de amor.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- Paso 2 -->
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <article class="step-card">
+
+                            <span class="step-number">
+                                02
+                            </span>
+
+                            <div
+                                class="step-icon"
+                                aria-hidden="true">
+                                📋
+                            </div>
+
+                            <h3>
+                                Envía tu solicitud
+                            </h3>
+
+                            <p>
+                                Completa el formulario de adopción
+                                con tus datos y cuéntanos por qué
+                                quieres adoptar.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- Paso 3 -->
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <article class="step-card">
+
+                            <span class="step-number">
+                                03
+                            </span>
+
+                            <div
+                                class="step-icon"
+                                aria-hidden="true">
+                                🤝
+                            </div>
+
+                            <h3>
+                                Evaluamos la solicitud
+                            </h3>
+
+                            <p>
+                                Nos pondremos en contacto contigo
+                                para conocer mejor tus condiciones
+                                y resolver tus dudas.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- Paso 4 -->
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <article class="step-card">
+
+                            <span class="step-number">
+                                04
+                            </span>
+
+                            <div
+                                class="step-icon"
+                                aria-hidden="true">
+                                🏠
+                            </div>
+
+                            <h3>
+                                Llévala a casa
+                            </h3>
+
+                            <p>
+                                Si todo está listo, podrás darle
+                                la bienvenida a tu nuevo compañero
+                                y comenzar una nueva historia.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
             </div>
 
-            <div style="text-align: center; margin-top: 2.5rem;">
-                <p style="font-size: 1.1rem; font-weight: 500;">¿Listo para cambiar una vida? 💚</p>
-                <a href="mascotas.html" class="boton boton-primario" style="margin-top: 0.5rem;">Ver mascotas disponibles 🐾</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ===== FOOTER ===== -->
+
+        <!-- =================================================
+             REQUISITOS
+             ================================================= -->
+
+        <section class="section section-blue">
+
+            <div class="container">
+
+                <div class="section-heading text-center">
+
+                    <span class="section-label">
+                        ANTES DE ADOPTAR
+                    </span>
+
+                    <h2>
+                        Requisitos para una
+                        <span>adopción responsable</span>
+                    </h2>
+
+                    <p>
+                        Adoptar es un compromiso para toda la vida.
+                        Antes de iniciar el proceso, asegúrate de
+                        estar preparado.
+                    </p>
+
+                </div>
+
+
+                <div class="row g-4 mt-4">
+
+                    <!-- Requisito 1 -->
+
+                    <div class="col-md-6">
+
+                        <article class="info-card">
+
+                            <div
+                                class="info-card-icon"
+                                aria-hidden="true">
+                                ❤️
+                            </div>
+
+                            <h3>
+                                Compromiso y responsabilidad
+                            </h3>
+
+                            <p>
+                                Debes estar dispuesto a cuidar,
+                                proteger y brindar amor a tu mascota
+                                durante toda su vida.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- Requisito 2 -->
+
+                    <div class="col-md-6">
+
+                        <article class="info-card">
+
+                            <div
+                                class="info-card-icon"
+                                aria-hidden="true">
+                                🏠
+                            </div>
+
+                            <h3>
+                                Espacio adecuado
+                            </h3>
+
+                            <p>
+                                La mascota debe contar con un espacio
+                                seguro, limpio y adecuado para sus
+                                necesidades.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- Requisito 3 -->
+
+                    <div class="col-md-6">
+
+                        <article class="info-card">
+
+                            <div
+                                class="info-card-icon"
+                                aria-hidden="true">
+                                🩺
+                            </div>
+
+                            <h3>
+                                Atención veterinaria
+                            </h3>
+
+                            <p>
+                                Debes comprometerte con sus controles
+                                veterinarios, vacunas, alimentación
+                                y cuidados necesarios.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- Requisito 4 -->
+
+                    <div class="col-md-6">
+
+                        <article class="info-card">
+
+                            <div
+                                class="info-card-icon"
+                                aria-hidden="true">
+                                👨‍👩‍👧
+                            </div>
+
+                            <h3>
+                                Acuerdo familiar
+                            </h3>
+
+                            <p>
+                                Todas las personas que viven en el hogar
+                                deben estar de acuerdo con la llegada
+                                de la nueva mascota.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CTA
+             ================================================= -->
+
+        <section class="cta-section">
+
+            <div class="container">
+
+                <div class="cta-content text-center">
+
+                    <div
+                        class="cta-icon"
+                        aria-hidden="true">
+                        🐾
+                    </div>
+
+                    <h2>
+                        ¿Listo para cambiar una vida?
+                    </h2>
+
+                    <p>
+                        Conoce nuestras mascotas disponibles y
+                        encuentra al compañero que está esperando
+                        una familia.
+                    </p>
+
+                    <a
+                        href="mascotas.html"
+                        class="btn btn-light btn-lg">
+
+                        Ver mascotas disponibles 🐾
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
     <footer class="site-footer">
+
         <div class="container">
+
             <div class="row g-4">
+
                 <!-- Información -->
+
                 <div class="col-lg-4">
-                    <a href="index.html" class="footer-brand">
+
+                    <a
+                        href="../index.html"
+                        class="footer-brand">
+
                         🐾 PetShelter
+
                     </a>
 
                     <p>
                         Trabajamos para que cada mascota encuentre
                         una familia responsable y llena de amor.
                     </p>
+
                 </div>
 
+
                 <!-- Navegación -->
+
                 <div class="col-md-4 col-lg-2">
+
                     <h3>
                         Navegación
                     </h3>
 
                     <ul class="footer-links">
+
                         <li>
                             <a href="../index.html">
                                 Inicio
                             </a>
                         </li>
+
                         <li>
                             <a href="nosotros.html">
                                 Nosotros
                             </a>
                         </li>
+
                         <li>
                             <a href="mascotas.html">
                                 Mascotas
                             </a>
                         </li>
+
                         <li>
                             <a href="adopcion.html">
                                 Adopción
                             </a>
                         </li>
+
                         <li>
                             <a href="contacto.html">
                                 Contacto
                             </a>
                         </li>
+
                     </ul>
+
                 </div>
 
+
                 <!-- Contacto -->
+
                 <div class="col-md-4 col-lg-3">
+
                     <h3>
                         Contacto
                     </h3>
 
                     <ul class="footer-contact">
+
                         <li>
                             📍 Bogotá, Colombia
                         </li>
+
                         <li>
                             📞 +57 300 241 2860
                         </li>
+
                         <li>
                             ✉️ petshelter@gmail.com.co
                         </li>
+
                     </ul>
+
                 </div>
 
+
                 <!-- Redes -->
+
                 <div class="col-md-4 col-lg-3">
+
                     <h3>
                         Síguenos
                     </h3>
@@ -210,18 +652,28 @@
                     </p>
 
                     <div class="social-links">
-                        <a href="#" aria-label="Instagram de PetShelter">
+
+                        <a
+                            href="#"
+                            aria-label="Instagram de PetShelter">
                             Instagram
                         </a>
 
-                        <a href="#" aria-label="Facebook de PetShelter">
+                        <a
+                            href="#"
+                            aria-label="Facebook de PetShelter">
                             Facebook
                         </a>
+
                     </div>
+
                 </div>
+
             </div>
 
+
             <div class="footer-bottom">
+
                 <p>
                     © 2026 PetShelter. Todos los derechos reservados.
                 </p>
@@ -229,11 +681,27 @@
                 <p>
                     Hecho con ❤️ para los animales.
                 </p>
+
             </div>
+
         </div>
+
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- =====================================================
+         BOOTSTRAP JS
+         ===================================================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXKX/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
+    </script>
+
+    <!-- JavaScript general -->
     <script src="../js/app.js"></script>
+
 </body>
+
 </html>
