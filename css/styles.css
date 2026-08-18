@@ -1323,3 +1323,53 @@ ul {
     }
 
 }
+
+/* =========================================================
+   AJUSTES DEL MODAL DE MASCOTAS
+   ========================================================= */
+
+.modal[style*="display: flex"] {
+    display: flex !important;
+}
+
+.modal-contenido {
+    max-height: calc(100vh - 3rem);
+    overflow-y: auto;
+}
+
+.cerrar {
+    border: 0;
+    background: transparent;
+    padding: 0;
+}
+
+.cerrar:hover {
+    color: var(--primary);
+}
+
+.grupo-formulario input,
+.grupo-formulario textarea {
+    transition:
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.grupo-formulario input:focus,
+.grupo-formulario textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(0, 85, 160, 0.12);
+}
+
+@media (max-width: 767px) {
+
+    .modal {
+        padding: 1rem;
+    }
+
+    .modal-contenido {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+}

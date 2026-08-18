@@ -2,37 +2,70 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
     <meta
         name="description"
-        content="PetShelter es un refugio de mascotas dedicado a encontrar hogares responsables y llenos de amor.">
-    <title>PetShelter | Refugio y adopción de mascotas</title>
+        content="Conoce las mascotas de PetShelter que están buscando una familia responsable y llena de amor.">
+
+    <title>Mascotas | PetShelter</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Bootstrap -->
     <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/styles.css">
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- CSS principal -->
+    <link
+        rel="stylesheet"
+        href="../css/styles.css">
 </head>
+
 <body>
 
-    <!-- =====NAVBAR===== -->
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+
     <header class="site-header">
+
         <nav class="navbar navbar-expand-lg">
+
             <div class="container">
 
-                <!-- Logo -->
-                <a class="navbar-brand" href="../index.html">
-                    <span class="brand-icon">🐾</span>
-                    <span>PetShelter</span>
+                <a
+                    class="navbar-brand"
+                    href="../index.html"
+                    aria-label="PetShelter - Ir al inicio">
+
+                    <span
+                        class="brand-icon"
+                        aria-hidden="true">
+                        🐾
+                    </span>
+
+                    <span>
+                        PetShelter
+                    </span>
+
                 </a>
 
-                <!-- Botón menú móvil -->
+
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -41,155 +74,346 @@
                     aria-controls="menuPrincipal"
                     aria-expanded="false"
                     aria-label="Abrir menú de navegación">
+
                     <span class="navbar-toggler-icon"></span>
+
                 </button>
 
-                <!-- Menú -->
-                <div class="collapse navbar-collapse" id="menuPrincipal">
+
+                <div
+                    class="collapse navbar-collapse"
+                    id="menuPrincipal">
+
                     <ul class="navbar-nav ms-auto">
+
                         <li class="nav-item">
-                            <a class="nav-link active" href="../index.html">
+                            <a
+                                class="nav-link"
+                                href="../index.html">
                                 Inicio
                             </a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="nosotros.html">
+                            <a
+                                class="nav-link"
+                                href="nosotros.html">
                                 Nosotros
                             </a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="mascotas.html">
+                            <a
+                                class="nav-link active"
+                                href="mascotas.html"
+                                aria-current="page">
                                 Mascotas
                             </a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="adopcion.html">
+                            <a
+                                class="nav-link"
+                                href="adopcion.html">
                                 Adopción
                             </a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">
+                            <a
+                                class="nav-link"
+                                href="contacto.html">
                                 Contacto
                             </a>
                         </li>
+
                     </ul>
 
-                    <a href="adopcion.html" class="btn btn-primary ms-lg-4">Adoptar</a>
+
+                    <a
+                        href="adopcion.html"
+                        class="btn btn-primary ms-lg-4">
+
+                        Adoptar
+
+                    </a>
 
                 </div>
+
             </div>
+
         </nav>
+
     </header>
 
-    <section class="seccion fondo-claro">
-        <div class="contenedor">
-            <h2 class="titulo-seccion">Mascotas que buscan familia 🐾</h2>
-            <p class="subtitulo-seccion">Estos amigos están listos para ir a casa. ¡Conócelos!</p>
 
-            <div class="mascotas-grid row g-4" id="listaMascotas">
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+         ===================================================== -->
+
+    <main>
+
+        <section class="section section-blue">
+
+            <div class="container">
+
+                <div class="section-heading text-center">
+
+                    <span class="section-label">
+                        ENCUENTRA A TU COMPAÑERO
+                    </span>
+
+                    <h1>
+                        Mascotas que buscan
+                        <span>una familia</span> 🐾
+                    </h1>
+
+                    <p>
+                        Estos amigos están listos para comenzar
+                        una nueva historia. Conócelos y descubre
+                        quién puede convertirse en tu nuevo compañero.
+                    </p>
+
+                </div>
+
             </div>
-        </div>
-    </section>
 
-    <!-- Ventana Modal de Adopción -->
-    <div class="modal" id="modalAdopcion">
+        </section>
+
+
+        <!-- =====================================================
+             LISTA DE MASCOTAS
+             ===================================================== -->
+
+        <section class="section section-light">
+
+            <div class="container">
+
+                <div
+                    class="row g-4 mascotas-grid"
+                    id="listaMascotas">
+
+                    <!-- Las mascotas se cargan mediante mascota.js -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         MODAL DE ADOPCIÓN
+         ===================================================== -->
+
+    <div
+        class="modal"
+        id="modalAdopcion"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="tituloModalAdopcion">
+
         <div class="modal-contenido">
-            <span class="cerrar" onclick="cerrarFormulario()">&times;</span>
-            <h3>¡Quiero adoptar a <span id="nombreMascota"></span>!</h3>
+
+            <button
+                type="button"
+                class="cerrar"
+                id="cerrarModal"
+                aria-label="Cerrar formulario de adopción">
+
+                &times;
+
+            </button>
+
+
+            <h2 id="tituloModalAdopcion">
+
+                ¡Quiero adoptar a
+                <span id="nombreMascota"></span>!
+
+            </h2>
+
+
             <form id="formAdopcion">
+
                 <div class="grupo-formulario">
-                    <label>Tu nombre completo:</label>
-                    <input type="text" required>
+
+                    <label for="nombreAdoptante">
+                        Tu nombre completo:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombreAdoptante"
+                        name="nombre"
+                        autocomplete="name"
+                        required>
+
                 </div>
+
+
                 <div class="grupo-formulario">
-                    <label>Tu teléfono:</label>
-                    <input type="tel" required>
+
+                    <label for="telefonoAdoptante">
+                        Tu teléfono:
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="telefonoAdoptante"
+                        name="telefono"
+                        autocomplete="tel"
+                        required>
+
                 </div>
+
+
                 <div class="grupo-formulario">
-                    <label>Tu correo:</label>
-                    <input type="email" required>
+
+                    <label for="correoAdoptante">
+                        Tu correo:
+                    </label>
+
+                    <input
+                        type="email"
+                        id="correoAdoptante"
+                        name="correo"
+                        autocomplete="email"
+                        required>
+
                 </div>
+
+
                 <div class="grupo-formulario">
-                    <label>¿Por qué quieres adoptarlo/a?</label>
-                    <textarea rows="3" required></textarea>
+
+                    <label for="motivoAdopcion">
+                        ¿Por qué quieres adoptarlo/a?
+                    </label>
+
+                    <textarea
+                        id="motivoAdopcion"
+                        name="motivo"
+                        rows="4"
+                        required></textarea>
+
                 </div>
-                <button type="submit" class="boton boton-primario">Enviar solicitud 📋</button>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary w-100">
+
+                    Enviar solicitud 📋
+
+                </button>
+
             </form>
+
         </div>
+
     </div>
 
-    <!-- ===== FOOTER ===== -->
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
     <footer class="site-footer">
+
         <div class="container">
+
             <div class="row g-4">
-                <!-- Información -->
+
                 <div class="col-lg-4">
-                    <a href="../index.html" class="footer-brand">
+
+                    <a
+                        href="../index.html"
+                        class="footer-brand">
+
                         🐾 PetShelter
+
                     </a>
 
                     <p>
                         Trabajamos para que cada mascota encuentre
                         una familia responsable y llena de amor.
                     </p>
+
                 </div>
 
-                <!-- Navegación -->
+
                 <div class="col-md-4 col-lg-2">
+
                     <h3>
                         Navegación
                     </h3>
 
                     <ul class="footer-links">
+
                         <li>
                             <a href="../index.html">
                                 Inicio
                             </a>
                         </li>
+
                         <li>
                             <a href="nosotros.html">
                                 Nosotros
                             </a>
                         </li>
+
                         <li>
                             <a href="mascotas.html">
                                 Mascotas
                             </a>
                         </li>
+
                         <li>
                             <a href="adopcion.html">
                                 Adopción
                             </a>
                         </li>
+
                         <li>
                             <a href="contacto.html">
                                 Contacto
                             </a>
                         </li>
+
                     </ul>
+
                 </div>
 
-                <!-- Contacto -->
+
                 <div class="col-md-4 col-lg-3">
+
                     <h3>
                         Contacto
                     </h3>
 
                     <ul class="footer-contact">
+
                         <li>
                             📍 Bogotá, Colombia
                         </li>
+
                         <li>
                             📞 +57 300 241 2860
                         </li>
+
                         <li>
                             ✉️ petshelter@gmail.com.co
                         </li>
+
                     </ul>
+
                 </div>
 
-                <!-- Redes -->
+
                 <div class="col-md-4 col-lg-3">
+
                     <h3>
                         Síguenos
                     </h3>
@@ -200,18 +424,28 @@
                     </p>
 
                     <div class="social-links">
-                        <a href="#" aria-label="Instagram de PetShelter">
+
+                        <a
+                            href="#"
+                            aria-label="Instagram de PetShelter">
                             Instagram
                         </a>
 
-                        <a href="#" aria-label="Facebook de PetShelter">
+                        <a
+                            href="#"
+                            aria-label="Facebook de PetShelter">
                             Facebook
                         </a>
+
                     </div>
+
                 </div>
+
             </div>
 
+
             <div class="footer-bottom">
+
                 <p>
                     © 2026 PetShelter. Todos los derechos reservados.
                 </p>
@@ -219,13 +453,25 @@
                 <p>
                     Hecho con ❤️ para los animales.
                 </p>
+
             </div>
+
         </div>
+
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
+    </script>
 
 
+    <!-- JavaScript de mascotas -->
     <script src="../js/mascota.js"></script>
+
 </body>
+
 </html>

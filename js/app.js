@@ -1,24 +1,76 @@
-// =====================================
+// =====================================================
 // PETSHELTER - JAVASCRIPT GENERAL
-// =====================================
+// =====================================================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    // =================================================
+    // FORMULARIO DE CONTACTO
+    // =================================================
+
+    const formularioContacto =
+        document.getElementById("formContacto");
 
 
-// =====================================
-// FORMULARIO DE CONTACTO
-// =====================================
+    if (formularioContacto) {
 
-const formularioContacto = document.getElementById("formContacto");
+        formularioContacto.addEventListener(
+            "submit",
+            (evento) => {
 
-if (formularioContacto) {
+                evento.preventDefault();
 
-    formularioContacto.addEventListener("submit", function (e) {
+                alert(
+                    "✅ ¡Mensaje enviado! Gracias por escribirnos. Te responderemos pronto."
+                );
 
-        e.preventDefault();
+                formularioContacto.reset();
 
-        alert(
-            "✅ ¡Mensaje enviado! Gracias por escribirnos. Te responderemos pronto."
+            }
         );
 
-        formularioContacto.reset();
-    });
-}
+    }
+
+
+    // =================================================
+    // MENÚ MÓVIL
+    // =================================================
+
+    const enlacesMenu =
+        document.querySelectorAll(
+            "#menuPrincipal .nav-link"
+        );
+
+    const menuPrincipal =
+        document.getElementById("menuPrincipal");
+
+
+    if (menuPrincipal && enlacesMenu.length > 0) {
+
+        enlacesMenu.forEach((enlace) => {
+
+            enlace.addEventListener("click", () => {
+
+                if (
+                    window.innerWidth < 992 &&
+                    menuPrincipal.classList.contains("show")
+                ) {
+
+                    const botonMenu =
+                        document.querySelector(
+                            ".navbar-toggler"
+                        );
+
+                    if (botonMenu) {
+                        botonMenu.click();
+                    }
+
+                }
+
+            });
+
+        });
+
+    }
+
+});
