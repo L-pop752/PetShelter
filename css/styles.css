@@ -129,6 +129,16 @@ ul {
     min-height: 76px;
 }
 
+.home-page .navbar-toggler {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px 10px;
+}
+
+.home-page .navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(0, 85, 160, .2);
+}
+
 .navbar-brand {
     display: inline-flex;
     align-items: center;
@@ -659,6 +669,14 @@ ul {
 /* RESPONSIVE */
 
 @media (max-width: 991px) {
+
+    .home-page .navbar-toggler {
+        display: block;
+    }
+
+    .home-page .navbar-collapse {
+        padding: 20px 0;
+    }
 
     .navbar-collapse {
         padding: 20px 0;

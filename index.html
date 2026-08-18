@@ -17,9 +17,14 @@
 
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            prefix: 'tw-'
+        }
+    </script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="home-page">
     <header class="site-header">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
@@ -105,23 +110,23 @@
         </section>
 
         <!-- ===== SECCIÓN TAILWIND ===== -->
-        <section class="py-20 bg-slate-950 text-white">
-            <div class="max-w-6xl mx-auto px-6">
-                <div class="grid md:grid-cols-3 gap-8 text-center">
-                    <div class="rounded-3xl bg-slate-900 p-8 shadow-xl">
-                        <div class="text-5xl mb-4">🐶</div>
-                        <h2 class="text-3xl font-bold mb-3">Mascotas</h2>
-                        <p class="text-slate-300">Conoce perros y gatos que esperan una familia responsable.</p>
+        <section class="tw-py-20 tw-bg-slate-950 tw-text-white">
+            <div class="tw-max-w-6xl tw-mx-auto tw-px-6">
+                <div class="tw-grid md:tw-grid-cols-3 tw-gap-8 tw-text-center">
+                    <div class="tw-rounded-3xl tw-bg-slate-900 tw-p-8 tw-shadow-xl">
+                        <div class="tw-text-5xl tw-mb-4">🐶</div>
+                        <h2 class="tw-text-3xl tw-font-bold tw-mb-3">Mascotas</h2>
+                        <p class="tw-text-slate-300">Conoce perros y gatos que esperan una familia responsable.</p>
                     </div>
-                    <div class="rounded-3xl bg-blue-900 p-8 shadow-xl">
-                        <div class="text-5xl mb-4">❤️</div>
-                        <h2 class="text-3xl font-bold mb-3">Amor</h2>
-                        <p class="text-blue-100">Promovemos el respeto y bienestar de todos los animales.</p>
+                    <div class="tw-rounded-3xl tw-bg-blue-900 tw-p-8 tw-shadow-xl">
+                        <div class="tw-text-5xl tw-mb-4">❤️</div>
+                        <h2 class="tw-text-3xl tw-font-bold tw-mb-3">Amor</h2>
+                        <p class="tw-text-blue-100">Promovemos el respeto y bienestar de todos los animales.</p>
                     </div>
-                    <div class="rounded-3xl bg-slate-900 p-8 shadow-xl">
-                        <div class="text-5xl mb-4">🏠</div>
-                        <h2 class="text-3xl font-bold mb-3">Hogares</h2>
-                        <p class="text-slate-300">Buscamos familias comprometidas con una adopción responsable.</p>
+                    <div class="tw-rounded-3xl tw-bg-slate-900 tw-p-8 tw-shadow-xl">
+                        <div class="tw-text-5xl tw-mb-4">🏠</div>
+                        <h2 class="tw-text-3xl tw-font-bold tw-mb-3">Hogares</h2>
+                        <p class="tw-text-slate-300">Buscamos familias comprometidas con una adopción responsable.</p>
                     </div>
                 </div>
             </div>
