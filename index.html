@@ -3,572 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta
-        name="description"
-        content="PetShelter es un refugio de mascotas dedicado a encontrar hogares responsables y llenos de amor.">
-    <title>PetShelter | Refugio y adopción de mascotas</title>
+    <meta name="description" content="PetShelter: refugio y adopción responsable de mascotas.">
+    <meta name="theme-color" content="#0055a0">
+    <title>PetShelter | Adopta con amor</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Bootstrap -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-    <!-- =====NAVBAR===== -->
-
     <header class="site-header">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-
-                <!-- Logo -->
-                <a class="navbar-brand" href="../index.html">
+                <a class="navbar-brand" href="index.html">
                     <span class="brand-icon">🐾</span>
                     <span>PetShelter</span>
                 </a>
-
-                <!-- Botón menú móvil -->
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#menuPrincipal"
-                    aria-controls="menuPrincipal"
-                    aria-expanded="false"
-                    aria-label="Abrir menú de navegación">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-                <!-- Menú -->
                 <div class="collapse navbar-collapse" id="menuPrincipal">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" href="../index.html">
-                                Inicio
-                            </a>
+                            <a class="nav-link active" href="index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/nosotros.html">
-                                Nosotros
-                            </a>
+                            <a class="nav-link" href="pages/nosotros.html">Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/mascotas.html">
-                                Mascotas
-                            </a>
+                            <a class="nav-link" href="pages/mascotas.html">Mascotas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/adopcion.html">
-                                Adopción
-                            </a>
+                            <a class="nav-link" href="pages/adopcion.html">Adopción</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/contacto.html">
-                                Contacto
-                            </a>
+                            <a class="nav-link" href="pages/contacto.html">Contacto</a>
                         </li>
                     </ul>
-
-                    <a href="pages/adopcion.html" class="btn btn-primary ms-lg-4">Adoptar</a>
-
+                    <button id="btnModoOscuro" class="btn btn-outline-primary ms-lg-3" type="button">🌙</button>
+                    <a href="pages/adopcion.html" class="btn btn-primary ms-lg-3">Adoptar</a>
                 </div>
             </div>
         </nav>
     </header>
 
     <main>
-        <!-- ==== HERO ===== -->
-
-        <section class="hero">
-            <div class="container">
-                <div class="row align-items-center">
-
-                    <!-- Texto -->
-                    <div class="col-lg-6">
-                        <span class="hero-badge">
-                            🐾 Encuentra a tu nuevo mejor amigo
-                        </span>
-
-                        <h1 class="hero-title">
-                            Una segunda oportunidad
-                            <span>llena de amor.</span>
-                        </h1>
-
-                        <p class="hero-description">
-                            En PetShelter ayudamos a perros y gatos a encontrar
-                            un hogar seguro, responsable y lleno de cariño.
-                        </p>
-
-                        <div class="hero-actions">
+        <!-- ===== CAROUSEL BOOTSTRAP ===== -->
+        <section class="hero-carousel">
+            <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=1600&q=80" class="carousel-img" alt="Perro esperando una familia">
+                        <div class="carousel-caption">
+                            <span class="hero-badge">🐾 Adopción responsable</span>
+                            <h1>Dale un hogar, <span>cambia una vida</span></h1>
+                            <p>Encuentra un compañero que necesita una familia llena de amor.</p>
                             <a href="pages/mascotas.html" class="btn btn-primary btn-lg">Ver mascotas</a>
-                            <a href="pages/nosotros.html" class="btn btn-outline-primary btn-lg">Conócenos</a>
                         </div>
-
                     </div>
-
-                    <!-- Imagen -->
-                    <div class="col-lg-6">
-                        <div class="hero-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=900&q=80" class="hero-image">
-
-                            <div class="hero-card">
-                                <strong>🐶 + 🐱</strong>
-                                <span>Esperando un hogar</span>
-                            </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1600&q=80" class="carousel-img" alt="Mascotas juntas" loading="lazy">
+                        <div class="carousel-caption">
+                            <span class="hero-badge">❤️ Amor y protección</span>
+                            <h2>Cada mascota <span>merece una oportunidad</span></h2>
+                            <p>Rescatamos, cuidamos y buscamos familias responsables.</p>
+                            <a href="pages/nosotros.html" class="btn btn-light btn-lg">Conócenos</a>
                         </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=1600&q=80" class="carousel-img" alt="Perro feliz" loading="lazy">
+                        <div class="carousel-caption">
+                            <span class="hero-badge">🏠 Un hogar para todos</span>
+                            <h2>Adopta, <span>ama y protege</span></h2>
+                            <p>Tu próximo mejor amigo puede estar esperándote.</p>
+                            <a href="pages/adopcion.html" class="btn btn-warning btn-lg">Quiero adoptar</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- ===== SECCIÓN TAILWIND ===== -->
+        <section class="py-20 bg-slate-950 text-white">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="rounded-3xl bg-slate-900 p-8 shadow-xl">
+                        <div class="text-5xl mb-4">🐶</div>
+                        <h2 class="text-3xl font-bold mb-3">Mascotas</h2>
+                        <p class="text-slate-300">Conoce perros y gatos que esperan una familia responsable.</p>
+                    </div>
+                    <div class="rounded-3xl bg-blue-900 p-8 shadow-xl">
+                        <div class="text-5xl mb-4">❤️</div>
+                        <h2 class="text-3xl font-bold mb-3">Amor</h2>
+                        <p class="text-blue-100">Promovemos el respeto y bienestar de todos los animales.</p>
+                    </div>
+                    <div class="rounded-3xl bg-slate-900 p-8 shadow-xl">
+                        <div class="text-5xl mb-4">🏠</div>
+                        <h2 class="text-3xl font-bold mb-3">Hogares</h2>
+                        <p class="text-slate-300">Buscamos familias comprometidas con una adopción responsable.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== INTRODUCCIÓN ===== -->
-
+        <!-- ===== INFORMACIÓN ===== -->
         <section class="section section-light">
             <div class="container">
-                <div class="section-heading text-center">
-
-                    <span class="section-label">
-                        SOBRE PETSHELTER
-                    </span>
-
-                    <h2>
-                        Más que un refugio,
-                        <span>somos una familia</span>
-                    </h2>
-
-                    <p>
-                        Creemos que todos los animales merecen una vida
-                        digna, segura y llena de amor.
-                    </p>
+                <div class="section-heading text-center mb-5">
+                    <span class="section-label">¿POR QUÉ ADOPTAR?</span>
+                    <h2>Cambias una vida <span>para siempre</span></h2>
+                    <p>Adoptar es una oportunidad para ti y para una mascota que necesita un hogar.</p>
                 </div>
-
-                <div class="row g-4 mt-4">
+                <div class="row g-4">
                     <div class="col-md-4">
                         <article class="info-card">
-
-                            <div class="info-card-icon">
-                                ❤️
-                            </div>
-
-                            <h3>
-                                Amor y cuidado
-                            </h3>
-
-                            <p>
-                                Brindamos atención, alimentación y cariño
-                                a cada mascota mientras encuentra su hogar.
-                            </p>
+                            <div class="info-card-icon">❤️</div>
+                            <h3>Das una segunda oportunidad</h3>
+                            <p>Ayudas a una mascota a tener una vida segura y llena de cariño.</p>
                         </article>
                     </div>
-
                     <div class="col-md-4">
                         <article class="info-card">
-
-                            <div class="info-card-icon">
-                                🏠
-                            </div>
-
-                            <h3>
-                                Hogares responsables
-                            </h3>
-
-                            <p>
-                                Buscamos familias comprometidas que puedan
-                                ofrecer una vida segura y feliz.
-                            </p>
-
+                            <div class="info-card-icon">🐾</div>
+                            <h3>Ganas un compañero</h3>
+                            <p>Las mascotas pueden convertirse en grandes compañeros de vida.</p>
                         </article>
                     </div>
-
                     <div class="col-md-4">
                         <article class="info-card">
-
-                            <div class="info-card-icon">
-                                🐾
-                            </div>
-
-                            <h3>
-                                Nuevas oportunidades
-                            </h3>
-
-                            <p>
-                                Cada adopción representa una nueva oportunidad
-                                para una mascota que espera ser parte de una familia.
-                            </p>
-
+                            <div class="info-card-icon">🌎</div>
+                            <h3>Ayudas a reducir el abandono</h3>
+                            <p>Promueves una cultura de adopción y responsabilidad animal.</p>
                         </article>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== MASCOTAS DESTACADAS ===== -->
-
-        <section class="section">
-            <div class="container">
-                <div class="section-heading">
-                    <div>
-                        <span class="section-label">
-                            ADOPTA
-                        </span>
-
-                        <h2>
-                            Conoce a algunos
-                            <span>de nuestros amigos</span>
-                        </h2>
-                    </div>
-
-                    <a href="pages/mascotas.html" class="section-link">Ver todas las mascotas →</a>
-                </div>
-
-                <div class="row g-4 mt-3">
-
-                    <!-- Mascota 1 -->
-                    <div class="col-md-4">
-                        <article class="pet-card">
-                            <div class="pet-card-image">
-                                <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=700&q=80" loading="lazy">
-                                <span class="pet-status">Disponible</span>
-                            </div>
-
-                            <div class="pet-card-content">
-
-                                <h3>
-                                    Max 🐾
-                                </h3>
-
-                                <p class="pet-card-info">
-                                    🐶 Perro · 2 años
-                                </p>
-
-                                <p>
-                                    Cariñoso, juguetón y listo para
-                                    encontrar una familia.
-                                </p>
-
-                                <a href="pages/mascotas.html" class="btn btn-primary w-100">Conocer a Max</a>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- Mascota 2 -->
-                    <div class="col-md-4">
-                        <article class="pet-card">
-                            <div class="pet-card-image">
-                                <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=700&q=80" loading="lazy">
-
-                                <span class="pet-status">
-                                    Disponible
-                                </span>
-                            </div>
-
-                            <div class="pet-card-content">
-
-                                <h3>
-                                    Rocky 🐾
-                                </h3>
-
-                                <p class="pet-card-info">
-                                    🐶 Perro · 3 años
-                                </p>
-
-                                <p>
-                                    Amigable, tranquilo y perfecto
-                                    para una familia activa.
-                                </p>
-
-                                <a href="pages/mascotas.html" class="btn btn-primary w-100">
-                                    Conocer a Rocky
-                                </a>
-                            </div>
-                        </article>
-                    </div>
-
-
-                    <!-- Mascota 3 -->
-                    <div class="col-md-4">
-                        <article class="pet-card">
-                            <div class="pet-card-image">
-                                <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=700&q=80" loading="lazy">
-
-                                <span class="pet-status">
-                                    Disponible
-                                </span>
-                            </div>
-
-                            <div class="pet-card-content">
-
-                                <h3>
-                                    Luna 🐾
-                                </h3>
-
-                                <p class="pet-card-info">
-                                    🐶 Perro · 1 año
-                                </p>
-
-                                <p>
-                                    Dulce, juguetona y muy cariñosa
-                                    con las personas.
-                                </p>
-
-                                <a href="pages/mascotas.html" class="btn btn-primary w-100">
-                                    Conocer a Luna
-                                </a>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== PROCESO DE ADOPCIÓN ===== -->
-        <section class="section section-blue">
-            <div class="container">
-                <div class="section-heading text-center">
-                    <span class="section-label">
-                        ¿CÓMO FUNCIONA?
-                    </span>
-
-                    <h2>
-                        Adoptar es más fácil
-                        <span>de lo que imaginas</span>
-                    </h2>
-
-                    <p>
-                        Te acompañamos durante todo el proceso para
-                        encontrar la mascota ideal para ti.
-                    </p>
-                </div>
-
-                <div class="row g-4 mt-4">
-                    <div class="col-md-3">
-                        <article class="step-card">
-                            <span class="step-number">
-                                01
-                            </span>
-
-                            <div class="step-icon">
-                                🔎
-                            </div>
-
-                            <h3>
-                                Conoce
-                            </h3>
-
-                            <p>
-                                Explora las mascotas disponibles.
-                            </p>
-                        </article>
-                    </div>
-
-                    <div class="col-md-3">
-                        <article class="step-card">
-                            <span class="step-number">
-                                02
-                            </span>
-
-                            <div class="step-icon">
-                                ❤️
-                            </div>
-
-                            <h3>
-                                Elige
-                            </h3>
-
-                            <p>
-                                Encuentra la mascota que conecte contigo.
-                            </p>
-                        </article>
-                    </div>
-
-
-                    <div class="col-md-3">
-                        <article class="step-card">
-                            <span class="step-number">
-                                03
-                            </span>
-
-                            <div class="step-icon">
-                                📝
-                            </div>
-
-                            <h3>
-                                Solicita
-                            </h3>
-
-                            <p>
-                                Completa nuestro formulario de adopción.
-                            </p>
-                        </article>
-                    </div>
-
-                    <div class="col-md-3">
-                        <article class="step-card">
-                            <span class="step-number">
-                                04
-                            </span>
-
-                            <div class="step-icon">
-                                🏠
-                            </div>
-
-                            <h3>
-                                Adopta
-                            </h3>
-
-                            <p>
-                                Dale a tu nuevo amigo un hogar para siempre.
-                            </p>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== CTA FINAL ===== -->
+        <!-- ===== CTA ===== -->
         <section class="cta-section">
-            <div class="container">
-                <div class="cta-content text-center">
-                    <span class="cta-icon">
-                        🐾
-                    </span>
-
-                    <h2>
-                        Tu próximo mejor amigo
-                        podría estar esperándote.
-                    </h2>
-
-                    <p>
-                        Conoce nuestras mascotas y descubre
-                        quién puede convertirse en parte de tu familia.
-                    </p>
-
-                    <a
-                        href="pages/mascotas.html"
-                        class="btn btn-light btn-lg"
-                    >
-                        Ver mascotas disponibles
-                    </a>
+            <div class="container text-center">
+                <div class="cta-content">
+                    <div class="cta-icon">🐾</div>
+                    <h2>¿Listo para encontrar a tu nuevo mejor amigo?</h2>
+                    <p>Explora nuestras mascotas disponibles y descubre quién puede formar parte de tu familia.</p>
+                    <a href="pages/mascotas.html" class="btn btn-light btn-lg">Ver mascotas disponibles</a>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- ===== OFFCANVAS ===== -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasAyuda" aria-labelledby="offcanvasAyudaLabel">
+        <div class="offcanvas-header">
+            <h2 class="offcanvas-title" id="offcanvasAyudaLabel">🐾 ¿Necesitas ayuda?</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>Si tienes dudas sobre adopción, puedes escribirnos desde nuestra página de contacto.</p>
+            <a href="pages/contacto.html" class="btn btn-primary w-100">Ir a contacto</a>
+        </div>
+    </div>
+
+    <!-- BOTÓN AYUDA -->
+    <button class="btn btn-primary ayuda-flotante" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasAyuda" aria-label="Abrir ayuda">❓</button>
+
     <!-- ===== FOOTER ===== -->
     <footer class="site-footer">
         <div class="container">
             <div class="row g-4">
-                <!-- Información -->
                 <div class="col-lg-4">
-                    <a href="../index.html" class="footer-brand">
-                        🐾 PetShelter
-                    </a>
-
-                    <p>
-                        Trabajamos para que cada mascota encuentre
-                        una familia responsable y llena de amor.
-                    </p>
+                    <a href="index.html" class="footer-brand">🐾 PetShelter</a>
+                    <p>Trabajamos para que cada mascota encuentre una familia responsable y llena de amor.</p>
                 </div>
-
-                <!-- Navegación -->
                 <div class="col-md-4 col-lg-2">
-                    <h3>
-                        Navegación
-                    </h3>
-
+                    <h3>Navegación</h3>
                     <ul class="footer-links">
-                        <li>
-                            <a href="../index.html">
-                                Inicio
-                            </a>
-                        </li>
-                        <li>
-                            <a href="pages/nosotros.html">
-                                Nosotros
-                            </a>
-                        </li>
-                        <li>
-                            <a href="pages/mascotas.html">
-                                Mascotas
-                            </a>
-                        </li>
-                        <li>
-                            <a href="pages/adopcion.html">
-                                Adopción
-                            </a>
-                        </li>
-                        <li>
-                            <a href="pages/contacto.html">
-                                Contacto
-                            </a>
-                        </li>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="pages/nosotros.html">Nosotros</a></li>
+                        <li><a href="pages/mascotas.html">Mascotas</a></li>
+                        <li><a href="pages/adopcion.html">Adopción</a></li>
+                        <li><a href="pages/contacto.html">Contacto</a></li>
                     </ul>
                 </div>
-
-                <!-- Contacto -->
                 <div class="col-md-4 col-lg-3">
-                    <h3>
-                        Contacto
-                    </h3>
-
+                    <h3>Contacto</h3>
                     <ul class="footer-contact">
-                        <li>
-                            📍 Bogotá, Colombia
-                        </li>
-                        <li>
-                            📞 +57 300 241 2860
-                        </li>
-                        <li>
-                            ✉️ petshelter@gmail.com.co
-                        </li>
+                        <li>📍 Colombia</li>
+                        <li>📞 +57 300 241 2860</li>
+                        <li>✉️ petshelter@gmail.com.co</li>
                     </ul>
                 </div>
-
-                <!-- Redes -->
                 <div class="col-md-4 col-lg-3">
-                    <h3>
-                        Síguenos
-                    </h3>
-
-                    <p>
-                        Conoce nuestras historias y mascotas
-                        en nuestras redes sociales.
-                    </p>
-
+                    <h3>Síguenos</h3>
+                    <p>Conoce nuestras historias y mascotas.</p>
                     <div class="social-links">
-                        <a href="#" aria-label="Instagram de PetShelter">
-                            Instagram
-                        </a>
-
-                        <a href="#" aria-label="Facebook de PetShelter">
-                            Facebook
-                        </a>
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="#" aria-label="Facebook">Facebook</a>
                     </div>
                 </div>
             </div>
-
             <div class="footer-bottom">
-                <p>
-                    © 2026 PetShelter. Todos los derechos reservados.
-                </p>
-
-                <p>
-                    Hecho con ❤️ para los animales.
-                </p>
+                <p>© 2026 PetShelter. Todos los derechos reservados.</p>
+                <p>Hecho con ❤️ para los animales.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Nuestro JavaScript -->
     <script src="js/app.js"></script>
 </body>
 </html>
