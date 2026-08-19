@@ -110,6 +110,8 @@ function guardarMascotas(mascotas) {
 
 async function cargarAPI() {
 
+    localStorage.removeItem("petShelterMascotas");
+
     try {
 
         const respuesta =
@@ -125,13 +127,8 @@ async function cargarAPI() {
             await respuesta.json();
 
 
-        const actuales =
-            obtenerMascotas();
-
-
-        datos.forEach((animal, indice) => {
-
-            actuales.push({
+        const mascotasAPI =
+            datos.map((animal, indice) => ({
 
                 id:
                     Date.now() + indice,
@@ -151,12 +148,10 @@ async function cargarAPI() {
                 imagen:
                     animal.url
 
-            });
-
-        });
+            }));
 
 
-        guardarMascotas(actuales);
+        guardarMascotas(mascotasAPI);
 
         mostrarMascotas();
 
@@ -165,6 +160,10 @@ async function cargarAPI() {
         console.warn(
             "No se pudo cargar la API. Se usarán mascotas locales."
         );
+
+        guardarMascotas(mascotasIniciales);
+
+        mostrarMascotas();
 
     }
 
